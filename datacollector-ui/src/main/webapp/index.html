@@ -20,7 +20,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="StreamSets Data Collector">
-  <title ng-bind="common.title">StreamSets | Data Collector</title>
+  <title>Krypton | Data Collector Powered By StreamSets</title>
 
   <script type="text/javascript">
     function escapeHtml(str) {
@@ -98,7 +98,7 @@
           </a>
         </li>
 
-        <li ng-if="!common.isDPMEnabled">
+        <!--<li ng-if="!common.isDPMEnabled">
           <a href="javascript:;" ng-click="common.onDPMButtonClick()"
              tooltip-placement="bottom"
              tooltip="{{'global.menu.dpm' | translate}}"
@@ -108,7 +108,7 @@
             <i class="fa fa-cloud fa-lg"></i>
             <span>SCH</span>
           </a>
-        </li>
+        </li>-->
 
         <li>
           <a ng-href="{{common.baseHref}}"
@@ -121,15 +121,15 @@
           </a>
         </li>
 
-        <li ng-if="!common.isSlaveNode && isAuthorized([userRoles.admin])">
-          <a href="/collector/packageManager"
+        <!--<li ng-if="!common.isSlaveNode && isAuthorized([userRoles.admin])">
+          <a href="collector/packageManager"
              tooltip-placement="bottom"
              tooltip="{{'global.menu.packageManager' | translate}}"
              tooltip-trigger="mouseenter"
              tooltip-popup-delay="500">
             <i class="fa fa-gift fa-lg"></i>
           </a>
-        </li>
+        </li>-->
 
         <li ng-if="common.isSlaveNode">
           <a ng-href="{{common.sdcClusterManagerURL}}"
@@ -193,7 +193,7 @@
         </li>
 
 
-        <li class="dropdown pointer"
+        <!--<li class="dropdown pointer"
             ng-if="common.userName && isAuthorized([userRoles.admin, userRoles.creator, userRoles.manager])">
           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"
              tooltip-placement="bottom"
@@ -263,7 +263,7 @@
             </li>
 
             <li ng-if="common.userName && isAuthorized([userRoles.admin]) && !common.isDPMEnabled && common.authenticationType !== 'none'">
-              <a href="/collector/usersAndGroups">
+              <a href="collector/usersAndGroups">
                 <i class="glyphicon glyphicon-user"></i>
                 <span translate="global.menu.admin.usersAndGroups">Users & Groups</span>
               </a>
@@ -283,7 +283,7 @@
               </a>
             </li>
           </ul>
-        </li>
+        </li>-->
 
         <li class="dropdown pointer" ng-if="common.authenticationType != 'none' || common.isDPMEnabled">
           <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:;"
@@ -344,25 +344,25 @@
           <ul class="dropdown-menu">
 
             <li>
-              <a href="javascript:;" ng-click="common.launchHelpContents()">
+              <a href="https://support.kryptoncloud.com/hc/" target="_blank">
                 <span class="fa fa-book"></span>
-                <span translate="global.menu.help.helpContents">Help Contents</span>
+                <span translate="global.menu.help.helpContents">Help and FAQs</span>
               </a>
             </li>
 
-            <li ng-if="common.userName && isAuthorized([userRoles.admin])">
+            <!--<li ng-if="common.userName && isAuthorized([userRoles.admin])">
               <a href="javascript:;" ng-click="common.showSupportBundle()">
                 <span class="fa fa-ticket"></span>
                 <span translate="global.menu.help.supportBundle">Support Bundle</span>
-              </a>
-            </li>
+              </a>-->
+            <!--</li>-->
 
-            <li>
+            <!--<li>
               <a href="collector/restapi">
                 <span class="fa fa-globe"></span>
                 <span translate="global.menu.help.restFulAPI">RESTful API</span>
               </a>
-            </li>
+            </li>-->
 
             <li>
               <a href="javascript:;" ng-click="common.showAbout()">
@@ -373,27 +373,26 @@
 
             <li role="presentation" class="divider"></li>
 
-            <li>
+            <!--<li>
               <a href="https://streamsetters-slack.herokuapp.com/" target="_blank">
                 <span class="fa fa-slack"></span>
                 <span translate="global.menu.help.chatOnSlack">Chat on Slack</span>
               </a>
-            </li>
+            </li>-->
 
-            <li>
+            <!--<li>
               <a href="https://groups.google.com/a/streamsets.com/d/forum/sdc-user" target="_blank">
                 <span class="fa fa-users"></span>
                 <span translate="global.menu.help.joinUserGroup">Join our User Group</span>
               </a>
-            </li>
+            </li>-->
 
-
-            <li>
+            <!--<li>
               <a href="https://ask.streamsets.com/questions/" target="_blank">
                 <span class="fa fa-question-circle"></span>
                 <span translate="global.menu.help.askStreamSets">Ask StreamSets</span>
               </a>
-            </li>
+            </li>-->
 
             <li role="presentation" class="divider"></li>
 
